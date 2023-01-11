@@ -39,7 +39,6 @@ public class HibernateQL {
         columnas = entityManager.createQuery("select min(c.id), max(c.id), count(c.id),sum(c.id), avg(c.id)  from Cliente c",Object[].class)
                 .getSingleResult();
         System.out.println(" min="+columnas[0]+", max="+columnas[1]+", count="+columnas[2]+", suma="+columnas[3]+", promedio="+columnas[4]);
-
         //siempre cerrar conexion
         entityManager.close();
     }
